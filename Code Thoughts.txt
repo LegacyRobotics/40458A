@@ -1,0 +1,65 @@
+Acceleration == (V2-V1)/Time
+
+To find Velocity from Accel
+
+Acceleration*Time = (V2-V1)
+
+1G = 9.8m/s
+
+
+
+Theoreticaly 1G or 9.8
+
+We need more resolution 0.1 second
+
+9.8 m/s == 0.98/0.1S or 
+1G == 0.1G/0.1S
+
+
+So every 0.1S drive moves certain value
+
+So call move amount every 100 ms
+
+So Drive.move((Accel*9.8)*0.1)then wait 100ms
+Simplified to Drive.move(Accel*0.98) then wait 100ms
+
+But need to convert  to mm
+so Accel*98 looked right
+
+Actually going back to old one Accel*9806mm/2*0.1
+
+So 9806* 0.1 = 980.6 
+So 1G = 980.6mm/s
+
+Or instead we just record turns...
+
+	So every 100ms, read leftmotor and rightmotor encoder values, and write the with fprintf to an sd card
+	Then some more code reads that and every 100ms tells the motors to move to position
+	Simple...
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
